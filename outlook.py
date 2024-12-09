@@ -7,15 +7,15 @@ import re  # Importa biblioteca para expressões regulares
 
 # Configuração do logging
 logging.basicConfig(
-    filename=(r'S:\SRC\01_Gestao_da_Receita\01-Recuperacao_Energia\2024\00 - Relatórios\Indicadores\04-TOI_Recebido\Retirados_FTP_py\logging\email_log.log'), 
+    filename=(r'\\email_log.log'), 
     level=logging.INFO,  # Define o nível de log como INFO
     format='%(asctime)s - %(levelname)s - %(message)s',  # Formato das mensagens de log
     filemode='w'  # Modo de escrita do arquivo de log (substitui o arquivo a cada execução)
 )
 
 # Definição de caminhos como constantes
-CAMINHO_DESTINATARIOS = r'S:\SRC\01_Gestao_da_Receita\01-Recuperacao_Energia\2024\00 - Relatórios\Indicadores\04-TOI_Recebido\Retirados_FTP_py\bases\Emails.xlsx'  # Caminho para o arquivo de destinatários
-CAMINHO_PLANILHA_BASE = r"S:\SRC\01_Gestao_da_Receita\01-Recuperacao_Energia\03-Usuarios\ALEX GUIDONI\--- ANÁLISE TOIS FTP\Processos retirados do FTP em {}.xlsx"  # Caminho base para a planilha a ser anexada
+CAMINHO_DESTINATARIOS = r'\\Emails.xlsx'  # Caminho para o arquivo de destinatários
+CAMINHO_PLANILHA_BASE = r"\\Planilha.xlsx"  # Caminho base para a planilha a ser anexada
 
 def get_greeting():
     # Função para obter uma saudação com base na hora atual
