@@ -14,7 +14,7 @@ logging.basicConfig(
     filename=(r'\\planilha_log.log'), 
     level=logging.INFO, # Define o nível de log como INFO
     format='%(asctime)s - %(levelname)s - %(message)s', # Define o formato das mensagens de log
-    filemode='w'
+    filemode='w'  # Modo de escrita do arquivo de log (substitui o arquivo a cada execução)
     )
 
 # Estilo de preenchimento para o cabeçalho da planilha Excel
