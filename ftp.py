@@ -8,7 +8,7 @@ def setup_logging():
         filename=(r'\\ftp_log.log'), 
         level=logging.DEBUG,  # Define o nível de log como DEBUG
         format='%(asctime)s - %(levelname)s - %(message)s',  # Define o formato das mensagens de log
-        filemode='w'
+        filemode='w'  # Modo de escrita do arquivo de log (substitui o arquivo a cada execução)
     )
 
 # Classe para gerenciar o download de arquivos via FTP
