@@ -90,27 +90,21 @@ def execute_query(cursor, ucs, pdf_files):
         found_ucs = {str(row[0]) for row in results}  # Cria um conjunto com os códigos encontrados na consulta
 
         # Verifica se todos os arquivos PDF estão presentes nos resultados
+        incorrect_ucs = []  # Lista para armazenar UCs incorretas
         for pdf in pdf_files:
             if pdf not in found_ucs:  # Se um PDF não foi encontrado nos resultados
+                incorrect_ucs.append(pdf)  # Adiciona à lista de UCs incorretas
                 logging.warning(f"UC não encontrada na consulta: {pdf}")  # Registra um aviso
+
+        # Se houver UCs incorretas, imprime mensagem no terminal
+        if incorrect_ucs:
+            print(f"Algumas UCs estão incorretas: {incorrect_ucs}. Verifique o logging para mais informações.")  # Mensagem no terminal
 
         return results if isinstance(results, list) else []  # Retorna os resultados se forem uma lista, caso contrário retorna uma lista vazia
     except oracledb.DatabaseError as e:  # Captura erros de execução da consulta
         logging.error(f"Erro ao executar a consulta SQL: {e}")  # Registra o erro
         return []  # Retorna uma lista vazia em caso de erro
-
-def load_localities(file_path):
-    # Função para carregar localidades de um arquivo de texto
-    localities = {}  # Dicionário para armazenar localidades
-    try:
-        with open(file_path, 'r') as file:  # Abre o arquivo de localidades para leitura
-            for line in file:  # Itera sobre cada linha do arquivo
-                cod_loc, locality = line.strip().split(',')  # Divide a linha em código e nome da localidade
-                localities[cod_loc] = locality  # Adiciona ao dicionário
-    except Exception as e:  # Captura qualquer erro durante a leitura do arquivo
-        logging.error(f"Erro ao carregar localidades do arquivo: {e}")  # Registra o erro
-    return localities  # Retorna o dicionário de localidades
-
+        
 def format_dataframe(results, current_date, localities, pdf_files, pdf_sources):
     # Função para formatar os resultados da consulta em um DataFrame do pandas
     results_df = pd.DataFrame(results, columns=['cod_un_cons_uee', 'cod_loc_uee'])  # Cria um DataFrame com os resultados
