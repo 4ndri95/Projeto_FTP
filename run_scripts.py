@@ -15,7 +15,7 @@ def run_script(script_name):
 def main():
     # Função principal que gerencia a execução dos scripts
     scripts_to_run = [
-        # Lista de scripts Python a serem executados
+        # Lista de scripts a serem executados
         r'S\\ftp.py',
         r'\\oracle.py',
         r'\\outlook.py'
