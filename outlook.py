@@ -75,8 +75,8 @@ def create_outlook_email():
     email.HTMLBody = f"""
     <html>
     <body>
-    <p>Boa tarde a todos!</p>
-    <p>Segue em anexo a relação dos Processos de TOI recebidos no dia 08.12.2024.</p>
+    <p>{greeting} a todos!</p>
+    <p>Segue em anexo a relação dos Processos de TOI recebidos no dia {previous_day}.</p>
     <p>Processos da Energec recebidos por e-mail.<br>
     Caso tenha algum processo que vocês enviaram e não se encontra na relação anexa, favor me retornar o e-mail informando e disponibilizar novamente no FTP.</p>
     <p>Atenciosamente,<br>
