@@ -13,7 +13,7 @@ logging.basicConfig(
     filemode='w'  # Modo de escrita do arquivo de log (substitui o arquivo a cada execução)
 )
 
-# Definição de caminhos como constantes
+# Definição de caminhos
 CAMINHO_DESTINATARIOS = r'\\Emails.xlsx'  # Caminho para o arquivo de destinatários
 CAMINHO_PLANILHA_BASE = r"\\Planilha.xlsx"  # Caminho base para a planilha a ser anexada
 
