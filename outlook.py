@@ -7,15 +7,18 @@ import re  # Importa biblioteca para expressões regulares
 
 # Configuração do logging
 logging.basicConfig(
-    filename=(r'\\email_log.log'), 
+    filename=(r'S:\SRC\01_Gestao_da_Receita\01-Recuperacao_Energia\2024\00 - Relatórios\Indicadores\04-TOI_Recebido\Retirados_FTP_py\logging\email_log.log'), 
     level=logging.INFO,  # Define o nível de log como INFO
     format='%(asctime)s - %(levelname)s - %(message)s',  # Formato das mensagens de log
     filemode='w'  # Modo de escrita do arquivo de log (substitui o arquivo a cada execução)
 )
 
-# Definição de caminhos
-CAMINHO_DESTINATARIOS = r'\\Emails.xlsx'  # Caminho para o arquivo de destinatários
-CAMINHO_PLANILHA_BASE = r"\\Planilha.xlsx"  # Caminho base para a planilha a ser anexada
+# Definição de caminhos como constantes
+CAMINHO_DESTINATARIOS = r'S:\SRC\01_Gestao_da_Receita\01-Recuperacao_Energia\2024\00 - Relatórios\Indicadores\04-TOI_Recebido\Retirados_FTP_py\bases\Emails.xlsx'  # Caminho para o arquivo de destinatários
+CAMINHO_PLANILHA_BASE = r"S:\SRC\01_Gestao_da_Receita\01-Recuperacao_Energia\03-Usuarios\ALEX GUIDONI\--- ANÁLISE TOIS FTP\Processos retirados do FTP em {}.xlsx"  # Caminho base para a planilha a ser anexada
+
+# Mensagem para o usuário antes de abrir o email
+input("Clique em qualquer tecla para prosseguir com o email (Lembre-se de olhar os prints e logs antes de prosseguir)")
 
 def get_greeting():
     # Função para obter uma saudação com base na hora atual
@@ -115,3 +118,7 @@ def create_outlook_email():
 
 if __name__ == "__main__":  # Verifica se o script está sendo executado diretamente
     create_outlook_email()  # Chama a função para criar o e-mail
+
+print("")
+print("==========")
+print("")
