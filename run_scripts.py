@@ -1,6 +1,6 @@
-import subprocess  # Importa o módulo subprocess para executar scripts externos
-import sys  # Importa o módulo sys para acessar informações sobre o sistema
-import logging  # Importa o módulo logging para registrar mensagens de erro
+import subprocess  
+import sys 
+import logging 
 
 def run_script(script_name):
     # Função para executar um script Python dado o seu nome
