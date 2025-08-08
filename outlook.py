@@ -1,9 +1,9 @@
-import win32com.client  # Importa a biblioteca para interagir com o Outlook
-from datetime import datetime, timedelta  # Importa classes para manipulação de datas
-import os  # Importa biblioteca para interações com o sistema operacional
-import pandas as pd  # Importa biblioteca para manipulação de dados em formato de tabela
-import logging  # Importa biblioteca para registro de logs
-import re  # Importa biblioteca para expressões regulares
+import win32com.client
+from datetime import datetime, timedelta 
+import os  
+import pandas as pd  
+import logging  
+import re  
 
 # Configuração do logging
 logging.basicConfig(
