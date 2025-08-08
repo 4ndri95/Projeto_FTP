@@ -1,6 +1,6 @@
-import ftplib  # Importa a biblioteca para manipulação de FTP
-import os  # Importa a biblioteca para interações com o sistema de arquivos
-import logging  # Importa a biblioteca para registro de logs
+import ftplib 
+import os  
+import logging  
 
 # Função para configurar o logging
 def setup_logging():
