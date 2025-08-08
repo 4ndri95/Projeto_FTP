@@ -1,13 +1,13 @@
-import os  # Módulo para interagir com o sistema operacional, como manipulação de arquivos e diretórios
-import re  # Módulo para trabalhar com expressões regulares
-import logging  # Módulo para registrar eventos e erros
-from datetime import datetime  # Módulo para manipulação de datas e horas
-import pandas as pd  # Biblioteca para manipulação e análise de dados
-import openpyxl  # Biblioteca para manipulação de arquivos Excel
-import oracledb  # Módulo para conectar-se ao banco de dados Oracle
-from openpyxl import Workbook  # Classe para criar novos arquivos Excel
-from openpyxl.styles import Font, Alignment, PatternFill, Border, Side  # Estilos para formatação de células no Excel
-import configparser  # Módulo para ler arquivos de configuração
+import os 
+import re  
+import logging  
+from datetime import datetime  
+import pandas as pd  
+import openpyxl  
+import oracledb  
+from openpyxl import Workbook 
+from openpyxl.styles import Font, Alignment, PatternFill, Border, Side  
+import configparser
 
 # Configuração do logging: define onde os logs serão salvos, o nível de severidade e o formato das mensagens
 logging.basicConfig(
