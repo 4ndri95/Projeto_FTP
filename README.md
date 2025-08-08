@@ -22,7 +22,7 @@ com os dados extraídos e envia o arquivo automaticamente por e-mail (Outlook). 
 
 # Como executar
 1. Configure as credenciais e caminhos nos arquivos de configuração (login_sql.ini, diretórios no código etc.)
-2. Execute o script principal que automatiza todo o fluxo (download, consulta, geração da planilha e envio do e-mail):
+2. Execute o script principal que automatiza todo o fluxo (download, consulta, geração da planilha e envio do e-mail): run_scripts.py
 3. Verifique os logs (ftp_log.log, planilha_log.log, email_log.log) para acompanhar o processo
 4. Abra o e-mail gerado automaticamente no Outlook para revisão e envio final
 
