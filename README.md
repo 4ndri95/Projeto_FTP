@@ -5,17 +5,11 @@ com os dados extraídos e envia o arquivo automaticamente por e-mail (Outlook). 
 
 # Funcionalidades
 • Conexão e download automático de arquivos PDF via FTP
-
 • Processamento e validação dos arquivos baixados
-
 • Consulta automatizada em banco de dados Oracle com PL/SQL
-
 • Geração de planilha Excel organizada com resultados
-
 • Envio automático do relatório por e-mail via Outlook
-
 • Logs detalhados para monitoramento e diagnóstico
-
 • Exclusão automática dos arquivos processados no servidor FTP (opcional)
 
 # Requisitos
