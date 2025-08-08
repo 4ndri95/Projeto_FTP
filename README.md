@@ -1,2 +1,4 @@
 # Projeto_FTP
-Aplicação com o objetivo de extrair documentação de diretórios presentes em uma rede FTP
+Aplicação desenvolvida para extrair a documentação contida em diretórios de uma rede FTP, gerar uma planilha com os nomes dos arquivos e encaminhá-la aos responsáveis para continuidade do processo.
+
+Testada e implementada em ambiente de trabalho.
